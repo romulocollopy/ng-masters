@@ -1,1 +1,38 @@
-<H1>HEY PUTADA</H1>
+<!doctype html>
+
+<head>
+    <title>Lista de Issues</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        
+        .container { position: relative; max-width: 1000px; margin: 0 auto; }
+
+        table { width: 100%; border: 1px solid #ccc; }
+        table tr th { font-weight: bold; color: #666 }
+
+        button { background-color: #ccc }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Busca Issues do GitHub</h1>
+        
+        <dl>
+            <dt>Usuario:</dt>
+            <dd><input type="text" id="user"></dd>
+            <dt>Repositório:</dt>
+            <dd><input type="text" id="reponame"></dd>
+        </dl>
+
+        <button>Busca lá as issues</button>
+
+        <table id="issuestable">
+            <tr>
+                <th>Número</th>
+                <th>Título</th>
+            </tr>
+
+        </table>
+    </div>
+</body>
