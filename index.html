@@ -3,19 +3,9 @@
 <head>
     <title>Lista de Issues</title>
     <meta charset="utf-8">
-    <style type="text/css">
- 
-        .container { position: relative; max-width: 1000px; margin: 0 auto; }
-        
-        dl { float: left; vertical-align: bottom }
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link type="text/css" href="css/styles.css" rel="stylesheet"></link>
 
-        table { width: 100%; border: 1px solid #ccc; margin: 20px 0 }
-        table tr { color: #666 }
-        table tr th { font-weight: bold; color: #fff; background-color: #ccc; font-size: 1.5em; text-align: left; padding: 0 8px }
-
-        button { background-color: #ccc; color: #fff; font-weight: bold; border-radius: 5px; border: 0; width: 200px; height: 28px; margin: 82px 16px 0 }
-
-    </style>
 </head>
 <body>
     <div class="container">
@@ -23,12 +13,12 @@
         
         <dl>
             <dt><label for="user">Usuario:</label></dt>
-            <dd><input type="text" id="user"></dd>
+            <dd><input type="text" id="user" tabindex="1"></dd>
             <dt><label for="reponame">Repositório:</label></dt>
-            <dd><input type="text" id="reponame"></dd>
+            <dd><input type="text" id="reponame" tabindex="2"></dd>
         </dl>
 
-        <button type="button" onclick='vaibuscarasissues();'>Busca lá as issues</button>
+        <button type="button" onclick='vaibuscarasissues();' tabindex="3">Busca lá as issues</button>
 
         <table id="issuestable">
             <tr>

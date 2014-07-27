@@ -22,6 +22,11 @@ function vaibuscarasissues(){
                     console.log(ixi);
                     console.log('bugou a ' + this.repo)
                 },
+                complete: function(){
+                    var tr = $(target).find('td').parent();
+                    tr.removeClass('odd');
+                    tr.filter(':odd').addClass('odd');
+                }
             });
         }    
         
