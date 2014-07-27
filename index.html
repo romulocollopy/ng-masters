@@ -39,52 +39,12 @@
         </table>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+    <script src="js/exercicio1.js" ></script>
     <script type="text/javascript">
-        function vaibuscarasissues(){
-            function GithubRepo(username, reponame){
-                var repo = 'https://api.github.com/repos/'+username+'/'+reponame+'/issues'; 
-                var le_repo = {
-                    'busca_issues_e_popula_tabela': function(target){
-                        $.ajax({
-                            url: repo,
-                            dataType: 'json',
-                            success: function(issues){
-                                $(target).find('td').parent().remove();
-                                if( typeof issues == 'string' ){
-                                    issues = JSON.parse(issues);
-                                }
-                                $.each(issues, function(){
-                                    var html = '<tr>';
-                                    html    += '<td>'+this.number+'</td><td>'+this.title+'</td>';
-                                    html    += '</tr>'
-                                    $(target).append(html)
-                                });
-                            },
-                            error: function(ixi){
-                                console.log(ixi);
-                                console.log('bugou a ' + repo)
-                            },
-
-                        });
-                    }                
-                }    
-                
-                return le_repo
-            }
-
-            var username = $('#user').val();
-            var reponame = $('#reponame').val();
-            
-            var le_repo = GithubRepo(username, reponame);
-            le_repo.busca_issues_e_popula_tabela("#issuestable");
-        } 
-            
-        //pre popula
-        $('#user').val( 'freedomsponsors' )
-        $('#reponame').val( 'www.freedomsponsors.org' )
-
-
-         
-        
-    </script>
+        $(document).ready(function(){
+            //pre popula
+            $('#user').val( 'freedomsponsors' );
+            $('#reponame').val( 'www.freedomsponsors.org' );
+        });
+   </script>
 </body>
